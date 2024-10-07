@@ -41,7 +41,7 @@ public class Ejercicio6 {
 		dentroRaiz = (b * b) - (4 * a * c);
 
 		// Creamos un if-else para calcular las posibles soluciones de la ecuación de
-		// segundo grado e indicar si no exite solución
+		// segundo grado e indicar si no exite solución y si existe imprimirlo por pantalla
 		if (dentroRaiz < 0) {
 			// Al ser el contenido dentro de la raiz un número negativo no existe solución
 			System.out.println("La ecuación planteada no tiene solución.");
