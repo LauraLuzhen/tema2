@@ -18,8 +18,6 @@ public class Ejercicio4 {
 
 		// Le pedimos al usuario dos números
 		System.out.println("Dime dos números enteros: ");
-
-		// La consola espera por dos números
 		num1 = reader.nextInt();
 		num2 = reader.nextInt();
 

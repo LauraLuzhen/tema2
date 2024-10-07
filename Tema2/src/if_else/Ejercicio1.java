@@ -16,8 +16,6 @@ public class Ejercicio1 {
 
 		// Pedimos al usuario un número
 		System.out.println("Dime un número entero: ");
-
-		// La consola espera por una respuesta del usuario
 		num = reader.nextInt();
 
 		// Creamos un if-else para comrobar si el nº es par o impar y que imprima el

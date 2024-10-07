@@ -16,8 +16,6 @@ public class Ejercicio3 {
 
 		// Pedimos al usuario un número decimal
 		System.out.println("Dime un número: ");
-
-		// La consola espera por una respuesta del usuario
 		num = reader.nextDouble();
 
 		// Creamos un if-else para saber si el nº del usuario es un nº casi-cero e
