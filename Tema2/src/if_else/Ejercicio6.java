@@ -45,6 +45,8 @@ public class Ejercicio6 {
 		if (dentroRaiz < 0) {
 			// Al ser el contenido dentro de la raiz un número negativo no existe solución
 			System.out.println("La ecuación planteada no tiene solución.");
+		} else if (a == 0) {
+			System.out.println("El denominador no puede valer 0.");
 		} else {
 			// Si no es un nº negativo calculamos la raíz cuadrada y las dos posibles
 			// soluciones de la ecuación de segundo grado
