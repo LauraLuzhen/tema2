@@ -41,8 +41,8 @@ public class Ejercicio10 {
 		} else {
 			System.out.println("La suma de ambos números dan otro número diferente al otro");
 		}
-
-		// Cerramos el Scanner
+		
+		//Cerramos el Scanner
 		reader.close();
 	}
 }
