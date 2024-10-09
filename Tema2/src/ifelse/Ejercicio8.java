@@ -1,4 +1,4 @@
-package if_else;
+package ifelse;
 
 //Importamos el Scanner
 import java.util.Scanner;
