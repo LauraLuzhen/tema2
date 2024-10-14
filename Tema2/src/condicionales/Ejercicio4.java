@@ -145,7 +145,11 @@ public class Ejercicio4 {
 					yield "El valor introducido es erróneo.";
 				}
 				};
-				System.err.println(decenas + unidades);
+				if (unidades == 0) {
+					System.out.println(valorDecenas);
+				} else {
+					System.out.println(valorDecenas + valorUnidades);
+				}
 			}
 			}
 		} else {
