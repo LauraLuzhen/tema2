@@ -7,6 +7,17 @@ public class Ejercicio4 {
 
 	public static void main(String[] args) {
 
+		/*
+		 * PRUEBAS MÍNIMAS
+		 * 
+		 * Prueba 1: introducir un número fuera del rango (1-99), debe imprimir el
+		 * mensaje de error. Por ejemplo, si ponemos -1 imprime
+		 * "El valor introducido es erróneo".
+		 * 
+		 * Prueba 2: introducir un número dentro del rango (1-99), debe imprimir el
+		 * número pero en cadena. Por ejemplo, si ponemos 78 imprime "setenta y ocho".
+		 */
+
 		// Creamos el Scanner
 		Scanner reader = new Scanner(System.in);
 
