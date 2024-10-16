@@ -32,25 +32,22 @@ public class Ejercicio4 {
 
 		// Creamos un while que sólo acepta 10 números introducidos por el usuario
 		while (contador < 10) {
-			contador += 1;
+			// Vamos aumentando 1 al contador para llegar a 10
+			contador++;
 
 			// Creamos un if si el número es positivos que vaya calculando su suma
+			// Si el número es negativo que los vata contando y sumando
+			// Si no es ningún caso anterior es 0 por lo que vamos contando los 0's
 			if (num > 0) {
 				sumaPositivos += num;
-			}
-
-			// Creamos un if si el número es cero que los vaya contando
-			if (num == 0) {
-				contadorCeros += 1;
-			}
-
-			// Creamos un if si el número es negativo que los vaya sumando y contando para
-			// después calcular su media
-			if (num < 0) {
+			} else if (num < 0) {
 				sumaNegativos += num;
-				contadorNegativos += 1;
+				contadorNegativos++;
+			} else {
+				contadorCeros++;
 			}
 
+			// Le volvemos a pedir al usuario un número
 			System.out.println("Introduce un número entero: ");
 			num = reader.nextInt();
 		}

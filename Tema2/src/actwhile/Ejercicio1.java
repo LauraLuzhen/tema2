@@ -26,6 +26,7 @@ public class Ejercicio1 {
 		while (num >= 0) {
 			suma += num;
 
+			// Le volvemos a pedir un número al usuario
 			System.out.println("Introduce un número entero: ");
 			num = reader.nextInt();
 		}

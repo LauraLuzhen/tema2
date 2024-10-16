@@ -31,6 +31,7 @@ public class Ejercicio3 {
 			suma += num;
 			contador += 1;
 
+			// Le volvemos a pedir un número al usuario
 			System.out.println("Introduce un número entero: ");
 			num = reader.nextInt();
 		}

@@ -27,6 +27,7 @@ public class Ejercicio2 {
 		while (num >= 0) {
 			contador += 1;
 
+			// Le volvemos a pedir un número al usuario
 			System.out.println("Introduce un número entero: ");
 			num = reader.nextInt();
 		}
