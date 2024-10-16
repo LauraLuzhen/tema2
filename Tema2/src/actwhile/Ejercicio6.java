@@ -38,11 +38,7 @@ public class Ejercicio6 {
 
 		// Imprimimos la altura del árbol más alto si es -1 no se considera un valor
 		// correcto
-		if (alturaArbol == -1) {
-			System.out.println("Introduce un valor válido.");
-		} else {
-			System.out.println("El árbol más alto es: " + arbolAlto + " cm");
-		}
+		System.out.println(arbolAlto != 1 ? arbolAlto : "Introduce un valor válido.");
 
 		// Cerramos el Scanner
 		reader.close();
