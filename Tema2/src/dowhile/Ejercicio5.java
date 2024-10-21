@@ -8,29 +8,49 @@ import java.util.Scanner;
 public class Ejercicio5 {
 
 	public static void main(String[] args) {
-		
-		//Declaración de variables
-		//Variable que guarda el número introducido por el usuario
-		int numUsuario;
-		//Variable que guarda un número random generado en un rango
+
+		// Declaración de variables
+		// Variable que guarda un número random
 		int numRandom;
-		//Variable que guarda la respuesta dada por el usuario
+		// Variable que guarda la respuesta del usuario
 		String respuesta;
-		
-		//Creamos el Scanner
-		Scanner reader = new Scanner (System.in);
-		
-		//Creamos un Random 
+		// Variable que guarda el mínimo del rango
+		int min = 1;
+		// Variable que guarda el máximo del rango
+		int max = 101;
+
+		// Creamos el Scanner
+		Scanner reader = new Scanner(System.in);
+
+		// Creamos un objeto de tipo random
 		Random rand = new Random();
-		
-		//Creamos un do-while que le pida al usuario que introduzca un nº del 1-100 
+
+		// Creamos un do-while que se sale del bucle cuando el usuario introduce igual
 		do {
-			System.out.println("Introduce un número del 1-100: ");
-			numUsuario = reader.nextInt();
-		} while (numUsuario < 1 || numUsuario > 100);
-		
-		
-		
-	
+			// Generamos un número random
+			numRandom = rand.nextInt(min, max);
+			System.out.println(numRandom);
+
+			// Le preguntamos al usuario
+			System.out.println("¿Es menor, mayor o igual? ");
+			respuesta = reader.next();
+
+			// Creamos un if que cambie el valor del máximo si el nº que hay que adivinar es
+			// menor que el random
+			if (respuesta.equalsIgnoreCase("menor")) {
+				max = numRandom + 1;
+			}
+			// Creamos un if que cambie el valor del mínimo si el nº que hay que adivinar es
+			// mayor que e random
+			if (respuesta.equalsIgnoreCase("mayor")) {
+				min = numRandom;
+			}
+		} while (!respuesta.equalsIgnoreCase("igual"));
+
+		// Imprimimos que hemos terminado el juego
+		System.out.println("fin");
+
+		// Cerramos el Scanner
+		reader.close();
 	}
 }
