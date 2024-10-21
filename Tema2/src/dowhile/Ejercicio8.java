@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ejercicio8 {
 
 	public static void main(String[] args) {
-		
+
 		// Declaración de variables
 		// Variable que guarda la primera tirada
 		int tirada1;
@@ -19,19 +19,28 @@ public class Ejercicio8 {
 		// Variable que guarda la suma de ambas tiradas
 		int suma;
 
-		//Creamos el Scanner
-		Scanner reader = new Scanner (System.in);
-		
+		// Creamos el Scanner
+		Scanner reader = new Scanner(System.in);
+
+		// Creamos un do-while que se sale del bucle siempre que el nº introducido este
+		// en mayúsuclas sea del 1-6
 		do {
 			// Le preguntamos al uruaio cuánto ha sacado en la primera tirada
-			System.out.println("¿Cuánto has sacado en la primera tirada? (Indicar el número con letras y en mayúsucalas): ");
+			System.out.println(
+					"¿Cuánto has sacado en la primera tirada? (Indicar el número con letras y en mayúsucalas): ");
 			respuesta1 = reader.next();
-		}
+		} while (!respuesta1.equals("UNO") && !respuesta1.equals("DOS") && !respuesta1.equals("TRES")
+				&& !respuesta1.equals("CUATRO") && !respuesta1.equals("CINCO") && !respuesta1.equals("SEIS"));
 
-
-		// Le preguntamos al uruaio cuánto ha sacado en la segunda tirada
-		System.out.println("¿Cuánto has sacado en la segunda tirada? (Indicar el número con letras y en mayúsculas): ");
-		respuesta2 = reader.next();
+		// Creamos un do-while que se sale del bucle siempre que el nº introducido este
+		// en mayúsuclas sea del 1-6
+		do {
+			// Le preguntamos al uruaio cuánto ha sacado en la segunda tirada
+			System.out.println(
+					"¿Cuánto has sacado en la segunda tirada? (Indicar el número con letras y en mayúsculas): ");
+			respuesta2 = reader.next();
+		} while (!respuesta2.equals("UNO") && !respuesta2.equals("DOS") && !respuesta2.equals("TRES")
+				&& !respuesta2.equals("CUATRO") && !respuesta2.equals("CINCO") && !respuesta2.equals("SEIS"));
 
 		// Creamos un switch para guardar el valor del dado en la primera tirada
 		tirada1 = switch (respuesta1) {
@@ -87,6 +96,6 @@ public class Ejercicio8 {
 
 		// Cerramos el Scanner
 		reader.close();
-		
+
 	}
 }
