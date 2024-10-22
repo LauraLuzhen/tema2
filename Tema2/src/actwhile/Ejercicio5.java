@@ -16,8 +16,6 @@ public class Ejercicio5 {
 		int sumaEdad = 0;
 		// Variable que calcula la media de las edades
 		double media;
-		// Variable que guarda la constante para que un alumno sea mayor de edad
-		final int MAYOR_EDAD = 18;
 		// Variable que guarda el número de alumnos que son mayores de edad
 		int numMayorEdad = 0;
 
