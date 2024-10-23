@@ -18,8 +18,8 @@ public class Ejercicio2 {
 		num = reader.nextInt();
 
 		// Creamos un for que imprima los múltiplos de 3
-		for (int i = 1; i * 3 <= num; i++) {
-			System.out.println(i * 3);
+		for (int i = 0; i <= num; i+=3) {
+			System.out.println(i);
 		}
 
 		// Cerramos el Scanner
