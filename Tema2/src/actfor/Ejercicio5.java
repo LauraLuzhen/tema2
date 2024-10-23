@@ -11,7 +11,7 @@ public class Ejercicio5 {
 		// Variable que guarda el número introducido por el usuario
 		int num;
 		// Variable que va calculando el factorial del número
-		int factorial = 1;
+		long factorial = 1;
 
 		// Creamos un Scanner
 		Scanner reader = new Scanner(System.in);
