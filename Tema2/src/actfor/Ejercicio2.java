@@ -17,9 +17,9 @@ public class Ejercicio2 {
 		System.out.println("Introduce un número entero: ");
 		num = reader.nextInt();
 
-		// Creamos un for
-		for (int i = 1; i*3 <= num; i++) {
-			System.out.println(i*3);
+		// Creamos un for que imprima los múltiplos de 3
+		for (int i = 1; i * 3 <= num; i++) {
+			System.out.println(i * 3);
 		}
 
 		// Cerramos el Scanner
