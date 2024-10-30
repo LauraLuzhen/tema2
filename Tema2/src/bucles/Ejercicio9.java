@@ -19,19 +19,32 @@ public class Ejercicio9 {
 
 		// Declaración de variables
 		// Variable que guarda el número del usuario
-		int num;
+		int num = 0;
 		// Variable que guarda el número cuando le quitamos cifras
 		int numCifra;
 		// Variable que guarda la cantidad de cifras del número siempre la cifra va a
 		// tener mínimo una cifra (inicializamos a 1)
 		int cifra = 1;
+		//Variable que indica si da error
+		boolean error = false;
 
 		// Creamos el Scanner
 		Scanner reader = new Scanner(System.in);
 
 		// Le pedimos al usuario un número entero
-		System.out.println("Introduce un número entero: ");
-		num = reader.nextInt();
+		do {
+			try {
+				System.out.println("Introduce un número entero: ");
+				num = reader.nextInt();
+				assert (num > 0) : "Introduce un número mayor que 0";
+				error = false;
+			} catch (Exception ex) {
+				System.err.println("Introduce un valor válido");
+				error = true;
+			} finally {
+				reader.nextLine();
+			}
+		} while (error);
 
 		// Le damos el valor del número introducido a número por cifra para hacer los
 		// cálculos

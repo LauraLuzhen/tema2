@@ -20,7 +20,7 @@ public class Ejercicio8 {
 
 		// Declaración de variables
 		// Variable que guarda el número introducido por el usuario
-		int num;
+		int num = 0;
 		// Variable que guarda el último número introducido válido
 		int ultimoNum;
 		// Variable que guarda el número total introducido por el usuario, lo
@@ -28,13 +28,26 @@ public class Ejercicio8 {
 		int numTotal = 1;
 		// Variable que guarda el número de fallos cometidos, inicializamos a 0
 		int numFallos = 0;
+		// Variable que indica si se produce un error o no
+		boolean error = false;
 
 		// Creamos el Scanner
 		Scanner reader = new Scanner(System.in);
 
 		// Le pedimos al usuario un número inicial
-		System.out.println("Introduce un número inicial: ");
-		num = reader.nextInt();
+		do {
+			try {
+				System.out.println("Introduce un número inicial: ");
+				num = reader.nextInt();
+				assert (num > 0) : "Introduce un número mayor que 0";
+				error = false;
+			} catch (Exception ex) {
+				System.err.println("Introduce un valor válido");
+				error = true;
+			} finally {
+				reader.nextLine();
+			}
+		} while (error);
 
 		// Guardamos el número dado en último número introducido
 		ultimoNum = num;
@@ -54,8 +67,19 @@ public class Ejercicio8 {
 			ultimoNum = num;
 
 			// Le volvemos a pedir un número al usuario
-			System.out.println("Introduce un número: ");
-			num = reader.nextInt();
+			do {
+				try {
+					System.out.println("Introduce un número: ");
+					num = reader.nextInt();
+					assert (num > 0) : "Introduce un número mayor que 0";
+					error = false;
+				} catch (Exception ex) {
+					System.out.println("Introduce un valor válido");
+					error = true;
+				} finally {
+					reader.nextLine();
+				}
+			} while (error);
 
 			// Aumentamos uno al número total introducidos
 			numTotal++;
